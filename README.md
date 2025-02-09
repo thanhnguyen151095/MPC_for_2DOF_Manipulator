@@ -14,5 +14,3 @@ where:
 - $C(q, \dot{q}) \in R^{n \time n}$  is the **Coriolis and centrifugal forces**.  
 - $G(q) \in R^{n}$ is the **gravity vector**.  
 - $\tau \in R^{n}$ is the **control torque**.  
-
-
