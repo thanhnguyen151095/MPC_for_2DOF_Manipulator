@@ -1,4 +1,4 @@
-# MPC_for_Manipulator
+# MPC for Robot Manipulators
 Model Predictive Tracking Control for Robot Manipulators
 
 # Description of Robot Manipulator Dynamic Model
@@ -18,12 +18,24 @@ where:
 Thus, the dynamic equation of the robot manipulator can be reformulated as follows:
 
 $$
-\dot{x} = Ax + Bu
+\dot{q} = M^{-1}(q) \left( \tau - C(q, \dot{q}) \dot{q} - G(q) \right)
 $$
 
-where $x =  [q^T \dot{q}^T]^T$, A = 
-
-The goal is to create an ideal control input $\tau$ that guides the actual joint position $q$ to match the target trajectory $q_d \in R^n$.
+The goal is to design an optimal control input $\tau$ that guides the actual joint position $q$ to match the target trajectory $q_d \in R^n$.
 
 # Model Predictive Control (MPC) Formulation
+We begin by defining the system state vector as follows:
+
+$$
+x = \begin{bmatrix} q^T \\ \dot{q}^T \end{bmatrix}^T
+$$
+
+Next, we can express the tracking error as:
+
+$$
+e = x - x_d
+$$
+
+Here, $x_d = [q^T_d \\ \dot{q}^T_d]^T$ denotes the desired trajectory, where $q_d$ and $\dot{q}_d$ represent the desired position and velocity, respectively.
+
 
