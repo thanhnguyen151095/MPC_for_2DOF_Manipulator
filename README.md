@@ -101,6 +101,12 @@ Define time step dt
 
 **Simulation Results**
 
+|_|_|
+|:---:|:---:|
+<img src="Figures/end-effector_tracking.png" alt="Description" width="600">| <img src="Figures/joint_tracking.png" alt="Description" width="600">|
+<img src="Figures/e1.png" alt="Description" width="600">| <img src="Figures/e2.png" alt="Description" width="600">|
+<img src="Figures/u1.png" alt="Description" width="600">| <img src="Figures/u2.png" alt="Description" width="600">|
+
 
 # References
 
