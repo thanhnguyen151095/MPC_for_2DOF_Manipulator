@@ -81,7 +81,7 @@ Define time step dt
     
     J = J + e' * Q * e + u_k' * R * u_k; % Compute cost
     
-  endfor
+  end for
 
 3.  Optimization options
 4.  Solve the optimization problem
@@ -90,6 +90,9 @@ Define time step dt
 7.  Back to step 2
 
 # Simulation Results and Discussion
+
+![image](https://github.com/user-attachments/assets/16ad4c61-c7ad-432b-a4a2-fa867f2ed659)
+
 
 # References
 
