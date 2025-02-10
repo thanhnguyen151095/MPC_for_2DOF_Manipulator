@@ -91,10 +91,15 @@ Define time step dt
 
 # Simulation Results and Discussion
 
-![image](https://github.com/user-attachments/assets/16ad4c61-c7ad-432b-a4a2-fa867f2ed659)
+**2-DOF Robot Manipulator**
 
-![](Figures/video.gif)
+<img src="https://github.com/user-attachments/assets/16ad4c61-c7ad-432b-a4a2-fa867f2ed659" alt="2-DOF Robot Manipulator" width="800">
 
+**Simulation Video** 
+
+<img src="Figures/video.gif" alt="Description" width="800">
+
+**Simulation Results**
 
 
 # References
