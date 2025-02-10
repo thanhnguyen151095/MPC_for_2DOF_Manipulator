@@ -1,4 +1,4 @@
-# MPC for Robot Manipulators
+# Model Predictive Control (MPC) for Robot Manipulators
 Model Predictive Tracking Control for Robot Manipulators
 
 # Description of Robot Manipulator Dynamic Model
@@ -23,7 +23,7 @@ $$
 
 The goal is to design an optimal control input $\tau$ that guides the actual joint position $q$ to match the target trajectory $q_d \in R^n$.
 
-# Model Predictive Control (MPC) Formulation
+# MPC Formulation
 We begin by defining the system state vector as follows:
 
 $$
@@ -37,5 +37,61 @@ e = x - x_d
 $$
 
 Here, $x_d = [q^T_d \\ \dot{q}^T_d]^T$ denotes the desired trajectory, where $q_d$ and $\dot{q}_d$ represent the desired position and velocity, respectively.
+
+MPC minimizes the following quadratic cost function over a prediction horizon \( N \):
+
+$$
+J = \sum_{k=0}^{N} \left( e ^T Q e + u_k^T R u_k \right)
+$$
+
+where:  
+- $Q$ is the **state weighting matrix**.  
+- $R$ is the **control weighting matrix**.  
+- $N$ is the **prediction horizon**.  
+
+The control input is optimized under the constraints:
+
+$$
+u_{\text{min}} \leq u_k \leq u_{\text{max}}
+$$
+
+MPC solves this optimization problem at every time step and applies only the first control input.
+
+# PseudoCode
+
+Define the number of steps N to predict ahead.
+
+Define time step dt
+
+1. Initial guess for control inputs u0 = zeros(n*N,1) % with n is number of joints
+   
+2. Define the cost function
+   
+  x_pred = x
+  
+  J = 0
+  
+  for k=1,...,N
+  
+    u_k = u(n*k-n+1:n*k)
+    
+    x_pred = x_pred + dt* $[\dot{q}, M^{-1}(q) \left( \tau - C(q, \dot{q}) \dot{q} - G(q) \right)]^T$
+    
+    e = x_pred - x_ref
+    
+    J = J + e' * Q * e + u_k' * R * u_k; % Compute cost
+    
+  endfor
+
+3.  Optimization options
+4.  Solve the optimization problem
+5.  Extract only the first control input
+6.  Apply to robot manipulator
+7.  Back to step 2
+
+# Simulation Results and Discussion
+
+# References
+
 
 
