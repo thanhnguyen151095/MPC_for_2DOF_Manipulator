@@ -93,7 +93,7 @@ Define time step dt
 
 ![image](https://github.com/user-attachments/assets/16ad4c61-c7ad-432b-a4a2-fa867f2ed659)
 
-![](Figures/DQN/video.gif)
+![](Figures/video.gif)
 
 
 
