@@ -107,6 +107,9 @@ Define time step dt
 <img src="Figures/e1.png" alt="Description" width="600">| <img src="Figures/e2.png" alt="Description" width="600">|
 <img src="Figures/u1.png" alt="Description" width="600">| <img src="Figures/u2.png" alt="Description" width="600">|
 
+**Discussion**
+
+# Conclusion
 
 # References
 1. https://scholar.google.com/citations?user=Mc76hQoAAAAJ&hl=en
