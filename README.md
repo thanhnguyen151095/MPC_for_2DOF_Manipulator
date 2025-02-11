@@ -109,7 +109,11 @@ Define time step dt
 
 **Discussion**
 
+Examining the simulation outcomes reveals that the actual joint position trajectories closely follow the desired paths. 
+Furthermore, the control signals are smooth and align with the saturation behavior of the hardware limits.
+
 # Conclusion
+
 
 # References
 1. https://scholar.google.com/citations?user=Mc76hQoAAAAJ&hl=en
